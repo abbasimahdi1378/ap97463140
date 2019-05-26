@@ -1,0 +1,11 @@
+0	Sadegh	Asoobar	Male	????	1344	11	11	1378	8	1
+0	Mahdi	Ataie	Male	??????	1364	4	8	1390	4	4
+0	Mahdi	Abbasi	Male	?????	1378	9	4	1390	9	4
+0	Nastaran	Abbasi	Female	????	1377	2	3	1390	1	2
+0	Javad	Aghaie	Male	?????	1376	2	3	1390	1	2
+0	Ali	Davoodi	Male	?????	1376	2	2	1382	2	2
+0	Mahsa	Ghasemi	Female	??????	1376	2	2	1382	2	2
+0	Simin	Heydari	Female	????	1376	2	2	1382	2	2
+0	Jimmy	Karter	Male	?????	1376	2	2	1382	2	2
+0	Alireza	Soleimani	Male	????	1376	2	2	1382	2	2
+0	Ali	Zanganeh	Male	پزشک	1340	2	2	1364	8	1

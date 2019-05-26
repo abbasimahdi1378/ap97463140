@@ -1,0 +1,4 @@
+1	m1	a1	Graduated	1400
+8	mahdi	abb	Graduating	24
+4	mam	maa	Graduated	2000
+3	Karim	Benzema	Graduating	100
