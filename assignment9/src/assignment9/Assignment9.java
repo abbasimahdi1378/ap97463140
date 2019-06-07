@@ -6,7 +6,10 @@
 package assignment9;
 
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.nio.file.Files;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
@@ -17,8 +20,10 @@ public class Assignment9 {
     /**
      * @param args the command line arguments
      */
-    public static void main(String[] args) {
+    public static void main(String[] args) throws FileNotFoundException {
         // TODO code application logic here
+        Long st=System.currentTimeMillis();
+        
         System.out.println("Please Enter the acsess level number : ");
         int al;
         java.util.Scanner sc=new java.util.Scanner(System.in);
@@ -30,25 +35,23 @@ public class Assignment9 {
         java.util.ArrayList<String> ls=new java.util.ArrayList<>();
         
         java.io.File f1=new java.io.File(path);
+        java.io.File f2=new java.io.File("f1.txt");
+        java.io.PrintWriter pw=new java.io.PrintWriter(f2);
         String sn="";
         if(f1.isDirectory())
         {
             sn=f1.getName();
             path=f1.getPath();
             explore(path,al,ls);
-            for(int i=0;i<ls.size();i++)
-             {
-                    if(ls.get(i).split(search).length>1)
-                    {
-                        System.out.println(ls.get(i));
-                   }
-             }
+           ls.stream().filter(s->s.contains(search)).forEach(System.out::println);
+           ls.stream().filter(s->s.contains(search)).forEach(pw::println);
+            pw.close();
         }
         else
         {
             System.out.println("Wrong Path!");
         }
-        
+        System.out.println((System.currentTimeMillis()-st)+" ms");
     }
     public static void explore(String Path,int level,java.util.ArrayList<String> list)
     {
@@ -62,7 +65,7 @@ public class Assignment9 {
                 {
                     if(ff[i].isDirectory())
                     {
-                        list.add(ff[i].getPath());
+                        list.add(ff[i].getPath());                      
                         explore(ff[i].getPath(),level-1,list);
                     }
                     else
